@@ -5,9 +5,13 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>خارطة الطريق لإتقان الألمانية - الخطة الشاملة</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0" rel="stylesheet">
 <style>
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden; /* يمنع ظهور سطر تمرير أفقي على الشاشات الصغيرة */
+        }
         body {
             font-family: 'Cairo', sans-serif;
             background-color: #f8fafc;
@@ -22,13 +26,13 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
         .tab-active {
-            border-bottom: 4px solid #ea580c;
+            border-bottom: 3px solid #ea580c;
             color: #ea580c;
             font-weight: 700;
         }
         .tab-inactive {
             color: #64748b;
-            border-bottom: 4px solid transparent;
+            border-bottom: 3px solid transparent;
         }
         .fade-in {
             animation: fadeIn 0.5s ease-in-out;
@@ -51,7 +55,7 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #94a3b8;
         }
-        /* Responsive Video Container (لم نعد نستخدمها للفريم نفسه لكن تُترك للتصميم إن احتجتها لاحقاً) */
+        /* Responsive Video Container */
         .video-wrapper {
             position: relative;
             padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
@@ -75,10 +79,10 @@
 <!-- Navbar -->
 <nav class="bg-white shadow-md sticky top-0 z-50">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between h-20 items-center">
+<div class="flex justify-between h-16 sm:h-20 items-center">
 <div class="flex items-center gap-2">
-<span class="material-symbols-outlined text-4xl text-orange-600">school</span>
-<h1 class="text-2xl font-bold text-slate-800 hidden sm:block">إتقان <span class="text-orange-600">الألمانية</span></h1>
+<span class="material-symbols-outlined text-3xl sm:text-4xl text-orange-600">school</span>
+<h1 class="text-xl sm:text-2xl font-bold text-slate-800 hidden sm:block">إتقان <span class="text-orange-600">الألمانية</span></h1>
 </div>
 <div class="flex gap-3">
 <!-- زر تحميل الكود المصدري -->
@@ -89,56 +93,55 @@
 <!-- Hero Section -->
 <header class="relative bg-slate-900 text-white overflow-hidden">
 <div class="absolute inset-0 opacity-40">
-<!-- صورة برلين ثابتة من رابط خارجي -->
-<img alt="Berlin Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&amp;fit=crop&amp;w=1600&amp;q=80">
+<img alt="Berlin Background" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1560969184-10fe8719e047?auto=format&fit=crop&w=1600&q=80">
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
-<div class="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8 text-center sm:text-right">
-<h2 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">رحلتك من الصفر إلى الطلاقة <br><span class="text-orange-500">خطة دراسية متكاملة</span></h2>
-<p class="text-xl text-gray-300 mb-10 max-w-2xl mr-0">
+<div class="relative max-w-7xl mx-auto px-4 py-16 sm:py-20 lg:py-24 sm:px-6 lg:px-8 text-center sm:text-right">
+<h2 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">رحلتك من الصفر إلى الطلاقة <br><span class="text-orange-500">خطة دراسية متكاملة</span></h2>
+<p class="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl mr-0">
         منهجية دقيقة وضعها الخبير "صموئيل ممدوح" تأخذ بيدك عبر المستويات A1 حتى B2، مصممة لتناسب جدولك اليومي وتضمن لك التحدث بطلاقة.
     </p>
-<div class="flex flex-wrap gap-4 justify-center sm:justify-start">
-<a class="bg-orange-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-orange-700 transition shadow-lg text-lg" href="#levels">ابـدأ الآن</a>
-<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-3 rounded-lg font-bold hover:bg-white/20 transition text-lg" href="#philosophy">كيف تعمل الخطة؟</a>
+<div class="flex flex-wrap gap-3 sm:gap-4 justify-center sm:justify-start">
+<a class="bg-orange-600 text-white px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold hover:bg-orange-700 transition shadow-lg text-base sm:text-lg" href="#levels">ابـدأ الآن</a>
+<a class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-6 sm:px-8 py-2.5 sm:py-3 rounded-lg font-bold hover:bg-white/20 transition text-base sm:text-lg" href="#philosophy">كيف تعمل الخطة؟</a>
 </div>
 </div>
 </header>
 <!-- Core Philosophy Section -->
-<section class="py-16 bg-white" id="philosophy">
+<section class="py-12 sm:py-16 bg-white" id="philosophy">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h3 class="text-3xl font-bold text-slate-900 mb-4">قواعد ذهبية قبل البدء</h3>
-<div class="w-24 h-1 bg-orange-500 mx-auto rounded"></div>
+<div class="text-center mb-10 sm:mb-16">
+<h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">قواعد ذهبية قبل البدء</h3>
+<div class="w-20 sm:w-24 h-1 bg-orange-500 mx-auto rounded"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 <!-- Card 1 -->
-<div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
-<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-3xl text-blue-600 js-replaced-missing-icon">radio_button_unchecked</span>
+<div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+<span class="material-symbols-outlined text-2xl sm:text-3xl text-blue-600 js-replaced-missing-icon">radio_button_unchecked</span>
 </div>
-<h4 class="text-xl font-bold mb-3">التركيز المطلق</h4>
-<p class="text-gray-600 leading-relaxed">
+<h4 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">التركيز المطلق</h4>
+<p class="text-gray-600 leading-relaxed text-sm sm:text-base">
                 لا تشتت نفسك بين المصادر. اختر كتاباً تعليمياً واحداً (Lehrwerk) مثل Menschen أو Netzwerk والتزم به بجانب هذه الخطة.
             </p>
 </div>
 <!-- Card 2 -->
-<div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
-<div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-3xl text-green-600">schedule</span>
+<div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+<span class="material-symbols-outlined text-2xl sm:text-3xl text-green-600">schedule</span>
 </div>
-<h4 class="text-xl font-bold mb-3">الاستمرارية اليومية</h4>
-<p class="text-gray-600 leading-relaxed">
+<h4 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">الاستمرارية اليومية</h4>
+<p class="text-gray-600 leading-relaxed text-sm sm:text-base">
                 الخطة تتطلب 3 إلى 6 ساعات يومياً. اللغة كائن حي يحتاج لرعاية يومية، والمهارات الأساسية (السماع والتحدث) لا غنى عنها يومياً.
             </p>
 </div>
 <!-- Card 3 -->
-<div class="bg-slate-50 p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
-<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
-<span class="material-symbols-outlined text-3xl text-orange-600">psychology</span>
+<div class="bg-slate-50 p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 card-hover text-center">
+<div class="w-14 h-14 sm:w-16 sm:h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6">
+<span class="material-symbols-outlined text-2xl sm:text-3xl text-orange-600">psychology</span>
 </div>
-<h4 class="text-xl font-bold mb-3">التطبيق لا الحفظ</h4>
-<p class="text-gray-600 leading-relaxed">
+<h4 class="text-lg sm:text-xl font-bold mb-2 sm:mb-3">التطبيق لا الحفظ</h4>
+<p class="text-gray-600 leading-relaxed text-sm sm:text-base">
                 القواعد لا تترجم بل تفهم. والكلمات تكتسب من السياق. الهدف هو الـ Output (التحدث والكتابة) وليس مجرد التخزين.
             </p>
 </div>
@@ -146,80 +149,80 @@
 </div>
 </section>
 <!-- Interactive Levels Section -->
-<section class="py-16 bg-slate-50 min-h-screen" id="levels">
+<section class="py-12 sm:py-16 bg-slate-50 min-h-screen" id="levels">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex flex-col items-center mb-12">
-<h3 class="text-3xl font-bold text-slate-900 mb-2">اختر مستواك الحالي</h3>
-<p class="text-gray-500">انقر على المستوى لعرض خطة المذاكرة التفصيلية والفيديو التوضيحي</p>
+<div class="flex flex-col items-center mb-8 sm:mb-12 text-center">
+<h3 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">اختر مستواك الحالي</h3>
+<p class="text-gray-500 text-sm sm:text-base">انقر على المستوى لعرض خطة المذاكرة التفصيلية والفيديو التوضيحي</p>
 </div>
 <!-- Tabs -->
-<div class="flex justify-center mb-8 border-b border-gray-200 overflow-x-auto">
-<button class="px-8 py-4 text-xl transition-all duration-300 whitespace-nowrap tab-active" id="tab-A1" onclick="switchTab('A1')">المستوى الأول A1</button>
-<button class="tab-inactive px-8 py-4 text-xl transition-all duration-300 whitespace-nowrap" id="tab-A2" onclick="switchTab('A2')">المستوى الثاني A2</button>
-<button class="tab-inactive px-8 py-4 text-xl transition-all duration-300 whitespace-nowrap" id="tab-B1" onclick="switchTab('B1')">العمود الفقري B1</button>
-<button class="tab-inactive px-8 py-4 text-xl transition-all duration-300 whitespace-nowrap" id="tab-B2" onclick="switchTab('B2')">الاحتراف B2</button>
+<div class="mb-6 sm:mb-8 border-b border-gray-200 overflow-x-auto">
+    <div class="flex w-max sm:w-full justify-start sm:justify-center text-sm sm:text-base md:text-lg">
+        <button class="px-4 sm:px-6 md:px-8 py-3 md:py-4 transition-all duration-300 whitespace-nowrap tab-active" id="tab-A1" onclick="switchTab('A1')">المستوى الأول A1</button>
+        <button class="tab-inactive px-4 sm:px-6 md:px-8 py-3 md:py-4 transition-all duration-300 whitespace-nowrap" id="tab-A2" onclick="switchTab('A2')">المستوى الثاني A2</button>
+        <button class="tab-inactive px-4 sm:px-6 md:px-8 py-3 md:py-4 transition-all duration-300 whitespace-nowrap" id="tab-B1" onclick="switchTab('B1')">العمود الفقري B1</button>
+        <button class="tab-inactive px-4 sm:px-6 md:px-8 py-3 md:py-4 transition-all duration-300 whitespace-nowrap" id="tab-B2" onclick="switchTab('B2')">الاحتراف B2</button>
+    </div>
 </div>
 <!-- Dynamic Content Container -->
-<div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 relative overflow-hidden fade-in" id="level-content">
+<div class="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 relative overflow-hidden fade-in" id="level-content">
             <!-- سيتم ملء هذا المحتوى بواسطة JavaScript -->
 </div>
 </div>
 </section>
 <!-- Resources Section -->
-<section class="py-16 bg-slate-900 text-white">
+<section class="py-12 sm:py-16 bg-slate-900 text-white">
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<h3 class="text-3xl font-bold mb-12 text-center">أدوات ومصادر لا غنى عنها</h3>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-<a class="block bg-slate-800 p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.dw.com/de/deutsch-lernen/s-2055" target="_blank">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-blue-400">language</span>
-<span class="font-bold text-lg">Deutsche Welle</span>
+<h3 class="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">أدوات ومصادر لا غنى عنها</h3>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+<a class="block bg-slate-800 p-4 sm:p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.dw.com/de/deutsch-lernen/s-2055" target="_blank">
+<div class="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+<span class="material-symbols-outlined text-sm sm:text-base md:text-xl text-blue-400">language</span>
+<span class="font-bold text-sm sm:text-lg">Deutsche Welle</span>
 </div>
-<p class="text-sm text-gray-400">كنز لمتعلمي الألمانية (Nicos Weg).</p>
+<p class="text-xs sm:text-sm text-gray-400">كنز لمتعلمي الألمانية (Nicos Weg).</p>
 </a>
-<a class="block bg-slate-800 p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://quizlet.com/" target="_blank">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-green-400">style</span>
-<span class="font-bold text-lg">Quizlet</span>
+<a class="block bg-slate-800 p-4 sm:p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://quizlet.com/" target="_blank">
+<div class="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+<span class="material-symbols-outlined text-sm sm:text-base md:text-xl text-green-400">style</span>
+<span class="font-bold text-sm sm:text-lg">Quizlet</span>
 </div>
-<p class="text-sm text-gray-400">لصناعة البطاقات التعليمية (Lernkarten).</p>
+<p class="text-xs sm:text-sm text-gray-400">لصناعة البطاقات التعليمية (Lernkarten).</p>
 </a>
-<a class="block bg-slate-800 p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.dict.cc/" target="_blank">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-yellow-400">menu_book</span>
-<span class="font-bold text-lg">Dict.cc / Pons</span>
+<a class="block bg-slate-800 p-4 sm:p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.dict.cc/" target="_blank">
+<div class="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+<span class="material-symbols-outlined text-sm sm:text-base md:text-xl text-yellow-400">menu_book</span>
+<span class="font-bold text-sm sm:text-lg">Dict.cc / Pons</span>
 </div>
-<p class="text-sm text-gray-400">قواميس دقيقة ثنائية اللغة.</p>
+<p class="text-xs sm:text-sm text-gray-400">قواميس دقيقة ثنائية اللغة.</p>
 </a>
-<a class="block bg-slate-800 p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.youtube.com/@EasyGerman" target="_blank">
-<div class="flex items-center gap-3 mb-2">
-<span class="material-symbols-outlined text-red-400">play_circle</span>
-<span class="font-bold text-lg">Easy German</span>
+<a class="block bg-slate-800 p-4 sm:p-6 rounded-xl hover:bg-slate-700 transition border border-slate-700" href="https://www.youtube.com/@EasyGerman" target="_blank">
+<div class="flex items-center gap-2 sm:gap-3 mb-1 sm:mb-2">
+<span class="material-symbols-outlined text-sm sm:text-base md:text-xl text-red-400">play_circle</span>
+<span class="font-bold text-sm sm:text-lg">Easy German</span>
 </div>
-<p class="text-sm text-gray-400">للاستماع من الشارع الألماني الحقيقي.</p>
+<p class="text-xs sm:text-sm text-gray-400">للاستماع من الشارع الألماني الحقيقي.</p>
 </a>
 </div>
 </div>
 </section>
 <!-- Footer -->
-<footer class="bg-white border-t border-gray-200 py-12">
+<footer class="bg-white border-t border-gray-200 py-10 sm:py-12">
 <div class="max-w-7xl mx-auto px-4 text-center">
-<p class="text-gray-600 mb-4">تم إعداد هذا العرض التفاعلي بناءً على خطة الخبير</p>
-<h4 class="text-2xl font-bold text-slate-800 mb-6">صموئيل ممدوح</h4>
-<div class="flex justify-center gap-4 text-sm text-gray-500">
+<p class="text-gray-600 mb-3 sm:mb-4 text-sm sm:text-base">تم إعداد هذا العرض التفاعلي بناءً على خطة الخبير</p>
+<h4 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6">صموئيل ممدوح</h4>
+<div class="flex justify-center gap-4 text-xs sm:text-sm text-gray-500">
 </div>
 </div>
 </footer>
 <!-- JavaScript Application Logic -->
 <script>
-    // Data Store: Using exact HTML strings provided by the user للـ iframes
     const planData = {
         A1: {
             title: "البداية: المستوى الأول A1",
             duration: "3 أشهر (متوسط)",
             description: "مرحلة التأسيس. هنا تبني القاعدة الأولى للغة. لا تستعجل النتائج، فالأساس المتين يعني بناءً شاهقاً لاحقاً.",
             heroImage: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=800&q=80",
-            // كود الفيديو كما أرسلته أنت بالضبط
             iframeHtml: `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/nNW2ewJEGCk?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>`,
             backupLink: "https://www.youtube.com/watch?v=nNW2ewJEGCk",
             focus: "الكلمات الأساسية، القواعد البسيطة، كسر حاجز الصوت.",
@@ -296,7 +299,6 @@
             duration: "3 أشهر (متوسط)",
             description: "مرحلة المعارف الأساسية (Grundkenntnisse). الخطة مشابهة لـ A1 ولكن التفاصيل أعمق. هنا ستبدأ بتكوين جمل أكثر تعقيداً.",
             heroImage: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?auto=format&fit=crop&w=800&q=80",
-            // كود الفيديو كما أرسلته أنت بالضبط
             iframeHtml: `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/uvt3eV5QRx8?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>`,
             backupLink: "https://www.youtube.com/watch?v=uvt3eV5QRx8",
             focus: "توسيع الحصيلة اللغوية، العروض التقديمية القصيرة، تحسين النطق.",
@@ -369,7 +371,6 @@
             duration: "4 أشهر (متوسط)",
             description: "النقلة النوعية الحقيقية. هنا تتحول من مبتدئ إلى مستخدم مستقل للغة. هذا المستوى هو الجسر نحو الطلاقة.",
             heroImage: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&w=800&q=80",
-            // كود الفيديو كما أرسلته أنت بالضبط
             iframeHtml: `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/CBP15OJWs7M?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>`,
             backupLink: "https://www.youtube.com/watch?v=CBP15OJWs7M",
             focus: "الاستغناء عن العربية، المفردات من السياق، الروابط المعقدة.",
@@ -419,7 +420,7 @@
                     color: "bg-teal-100 text-teal-700",
                     details: `
                         <ul class="list-disc list-inside space-y-2 text-gray-700">
-                            <li>الـ <strong>Redemittel</strong> في B1 مقدسة! (مثل: <em>Meiner Meinung nach... / Ich stehe auf dem Standpunkt, dass...</em>). احفظها واستخدمها دائماً.</li>
+                            <li>الـ <strong>Redemittel</strong> في B1 مقدسة! (مثل: <em>Meiner Meinung nach... / Ich stehe على dem Standpunkt, dass...</em>). احفظها واستخدمها دائماً.</li>
                             <li>العروض التقديمية (Präsentationen) ضرورية جداً للتحضير للمستوى التالي.</li>
                         </ul>
                     `
@@ -444,7 +445,6 @@
             duration: "4 - 5 أشهر",
             description: "من لم يدرس B2 لم يدرس الألمانية! هنا يحدث التعمق (Vertiefung). اللغة تصبح جزءاً من حياتك، وتفهم الفروق الدقيقة.",
             heroImage: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80",
-            // كود الفيديو كما أرسلته أنت بالضبط
             iframeHtml: `<div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 56.25%;"><iframe src="https://www.youtube.com/embed/InGnuLpkULY?rel=0" style="top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen scrolling="no" allow="accelerometer *; clipboard-write *; encrypted-media *; gyroscope *; picture-in-picture *; web-share *;" referrerpolicy="strict-origin"></iframe></div>`,
             backupLink: "https://www.youtube.com/watch?v=InGnuLpkULY",
             focus: "الانغماس الكامل، الأخبار، التعبيرات الاصطلاحية (Redewendungen).",
@@ -505,14 +505,12 @@
     let currentLevel = 'A1';
 
     function switchTab(level) {
-        // Update Tab UI
         document.querySelectorAll('button[id^="tab-"]').forEach(btn => {
             btn.classList.remove('tab-active');
             btn.classList.add('tab-inactive');
         });
         document.getElementById(`tab-${level}`).classList.add('tab-active');
         document.getElementById(`tab-${level}`).classList.remove('tab-inactive');
-        
         currentLevel = level;
         renderContent(level);
     }
@@ -520,10 +518,9 @@
     function renderContent(level) {
         const data = planData[level];
         const container = document.getElementById('level-content');
-        
-        // Animation reset
+
         container.classList.remove('fade-in');
-        void container.offsetWidth; // trigger reflow
+        void container.offsetWidth;
         container.classList.add('fade-in');
 
         let scheduleHTML = '';
@@ -532,24 +529,23 @@
             <div class="border border-slate-200 rounded-xl overflow-hidden mb-4 shadow-sm hover:shadow-md transition">
                 <div class="bg-white p-4 cursor-pointer flex justify-between items-center" onclick="toggleAccordion('item-${index}')">
                     <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 rounded-full ${item.color} flex items-center justify-center shrink-0">
-                            <span class="material-symbols-outlined">${item.icon}</span>
+                        <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-full ${item.color} flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-base sm:text-lg">${item.icon}</span>
                         </div>
                         <div>
-                            <h4 class="font-bold text-lg text-slate-800">${item.skill}</h4>
-                            <span class="text-sm text-gray-500 bg-slate-100 px-2 py-1 rounded">${item.time}</span>
+                            <h4 class="font-bold text-base sm:text-lg text-slate-800">${item.skill}</h4>
+                            <span class="text-xs sm:text-sm text-gray-500 bg-slate-100 px-2 py-1 rounded inline-block mt-1">${item.time}</span>
                         </div>
                     </div>
-                    <span class="material-symbols-outlined text-gray-400 transform transition-transform" id="icon-item-${index}">expand_more</span>
+                    <span class="material-symbols-outlined text-gray-400 transform transition-transform text-base sm:text-lg" id="icon-item-${index}">expand_more</span>
                 </div>
-                <div id="item-${index}" class="hidden bg-slate-50 border-t border-slate-100 p-6 text-right leading-relaxed text-gray-700">
+                <div id="item-${index}" class="hidden bg-slate-50 border-t border-slate-100 p-4 sm:p-6 text-right leading-relaxed text-gray-700">
                     ${item.details}
                 </div>
             </div>
             `;
         });
 
-        // استخدام كود الفيديو كما هو، مع حاوية للـ shadow والـ border radius فقط
         const videoHTML = `
             <div class="rounded-2xl overflow-hidden shadow-lg bg-slate-200">
                 ${data.iframeHtml}
@@ -557,34 +553,34 @@
         `;
 
         container.innerHTML = `
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
                 <div>
-                    <span class="inline-block bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-bold mb-4">المدة التقريبية: ${data.duration}</span>
-                    <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">${data.title}</h2>
-                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">${data.description}</p>
-                    <div class="bg-blue-50 border-r-4 border-blue-500 p-4 rounded-lg mb-6">
-                        <h5 class="font-bold text-blue-800 mb-1 flex items-center gap-2">
-                            <span class="material-symbols-outlined">target</span> التركيز في هذا المستوى:
+                    <span class="inline-block bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs sm:text-sm font-bold mb-3 sm:mb-4">المدة التقريبية: ${data.duration}</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 mb-4 sm:mb-6">${data.title}</h2>
+                    <p class="text-sm sm:text-base md:text-lg text-gray-600 mb-4 sm:mb-6 leading-relaxed">${data.description}</p>
+                    <div class="bg-blue-50 border-r-4 border-blue-500 p-3 sm:p-4 rounded-lg mb-4 sm:mb-6">
+                        <h5 class="font-bold text-blue-800 mb-1 flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-base sm:text-lg">target</span> التركيز في هذا المستوى:
                         </h5>
-                        <p class="text-blue-700">${data.focus}</p>
+                        <p class="text-blue-700 text-sm sm:text-base">${data.focus}</p>
                     </div>
                      <!-- قسم الفيديو التوضيحي -->
-                    <div class="mb-6">
-                        <h5 class="font-bold text-slate-800 mb-3 flex items-center gap-2">
-                            <span class="material-symbols-outlined text-red-600">play_circle</span> فيديو توضيحي للخطة:
+                    <div class="mb-4 sm:mb-6">
+                        <h5 class="font-bold text-slate-800 mb-2 sm:mb-3 flex items-center gap-2 text-sm sm:text-base">
+                            <span class="material-symbols-outlined text-red-600 text-base sm:text-lg">play_circle</span> فيديو توضيحي للخطة:
                         </h5>
                         ${videoHTML}
                     </div>
                 </div>
-                <div class="relative h-64 lg:h-auto rounded-2xl overflow-hidden shadow-lg group">
+                <div class="relative h-52 sm:h-64 lg:h-auto rounded-2xl overflow-hidden shadow-lg group mt-2 lg:mt-0">
                         <img src="${data.heroImage}" alt="${level} Level" class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 </div>
             </div>
 
-            <div class="mb-8">
-                <h3 class="text-2xl font-bold text-slate-800 mb-6 flex items-center gap-2">
-                    <span class="material-symbols-outlined text-orange-500">calendar_month</span>
+            <div class="mb-6 sm:mb-8">
+                <h3 class="text-xl sm:text-2xl font-bold text-slate-800 mb-4 sm:mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-orange-500 text-base sm:text-lg">calendar_month</span>
                     الجدول اليومي المقترح
                 </h3>
                 <div class="space-y-4">
@@ -592,13 +588,13 @@
                 </div>
             </div>
 
-            <div class="bg-slate-900 text-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-6">
-                <div class="bg-orange-500 p-3 rounded-full shrink-0">
-                    <span class="material-symbols-outlined text-3xl">lightbulb</span>
+            <div class="bg-slate-900 text-white p-4 sm:p-6 rounded-2xl shadow-lg flex flex-col md:flex-row items-center gap-4 sm:gap-6">
+                <div class="bg-orange-500 p-2 sm:p-3 rounded-full shrink-0">
+                    <span class="material-symbols-outlined text-2xl sm:text-3xl">lightbulb</span>
                 </div>
                 <div>
-                    <h4 class="font-bold text-xl mb-2">نصيحة إضافية للمستوى ${level}</h4>
-                    <p class="text-gray-300 leading-relaxed">${data.extras}</p>
+                    <h4 class="font-bold text-lg sm:text-xl mb-1 sm:mb-2">نصيحة إضافية للمستوى ${level}</h4>
+                    <p class="text-gray-300 leading-relaxed text-sm sm:text-base">${data.extras}</p>
                 </div>
             </div>
         `;
@@ -607,7 +603,7 @@
     function toggleAccordion(id) {
         const content = document.getElementById(id);
         const icon = document.getElementById(`icon-${id}`);
-        
+
         if (content.classList.contains('hidden')) {
             content.classList.remove('hidden');
             icon.style.transform = 'rotate(180deg)';
@@ -617,25 +613,6 @@
         }
     }
 
-    function downloadPlan() {
-        alert("تم إعداد الملف للتحميل! \n(محاكاة: سيبدأ تحميل ملف PDF يحتوي على الخطة الكاملة والروابط قريباً).");
-    }
-    
-    // Function to download the source code of the page
-    function downloadSourceCode() {
-        const htmlContent = document.documentElement.outerHTML;
-        const blob = new Blob([htmlContent], { type: 'text/html' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'German_Mastery_Plan.html';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-    }
-
-    // Initialize with A1
     document.addEventListener('DOMContentLoaded', () => {
         switchTab('A1');
     });
