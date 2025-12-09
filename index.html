@@ -82,16 +82,6 @@
 </div>
 <div class="flex gap-3">
 <!-- زر تحميل الكود المصدري -->
-<button class="border-2 border-slate-700 text-slate-700 px-4 py-2 rounded-full font-bold hover:bg-slate-100 transition flex items-center gap-2" onclick="downloadSourceCode()">
-<span class="material-symbols-outlined">code</span>
-<span class="hidden md:inline">تحميل الكود</span>
-</button>
-<!-- زر تحميل الخطة PDF -->
-<button class="bg-slate-900 text-white px-4 md:px-6 py-2 rounded-full font-bold hover:bg-slate-700 transition flex items-center gap-2 shadow-lg" onclick="downloadPlan()">
-<span class="material-symbols-outlined">download</span>
-<span class="hidden md:inline">تحميل الخطة PDF</span>
-<span class="md:hidden">PDF</span>
-</button>
 </div>
 </div>
 </div>
@@ -564,11 +554,6 @@
         const videoHTML = `
             <div class="rounded-2xl overflow-hidden shadow-lg bg-slate-200">
                 ${data.iframeHtml}
-            </div>
-            <div class="mt-2 text-center">
-                <a href="${data.backupLink}" target="_blank" class="text-xs text-orange-600 underline hover:text-orange-800">
-                    إذا لم يعمل الفيديو، اضغط هنا للمشاهدة على يوتيوب مباشرة
-                </a>
             </div>
         `;
 
